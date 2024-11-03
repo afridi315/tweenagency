@@ -1,0 +1,30 @@
+
+  (function ($) {
+  
+  "use strict";
+
+    // NAVBAR
+    $('.navbar-nav .nav-link').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
+
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 50) {
+            $(".navbar").addClass("sticky-nav");
+        } else {
+            $(".navbar").removeClass("sticky-nav");
+        }
+    });
+
+    // BACKSTRETCH SLIDESHOW
+    $('#section_first').backstretch([
+      "images/slide/slider1.jpg", 
+      "images/slide/slider2.jpg",
+      "images/slide/slider3.jpg"
+    ],  {duration: 2000, fade: 950});
+    
+  })(window.jQuery);
+
+
